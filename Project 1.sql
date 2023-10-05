@@ -28,9 +28,9 @@ CREATE TABLE Receipt_Table (
   Zip varchar(5) NOT NULL,
   StateName char(2) NOT NULL,
   Number_Of_Items INT NOT NULL,
-  Total_Sales decimal(12 , 2) NOT NULL,
-  Highest_Price decimal(12 , 2) NOT NULL,
-  Lowest_Price decimal(12 , 2) NOT NULL,
+  Total_Sales decimal(15 , 2) NOT NULL,
+  Highest_Price decimal(15 , 2) NOT NULL,
+  Lowest_Price decimal(15 , 2) NOT NULL,
   PRIMARY KEY (Transaction_Number),
   FOREIGN KEY (Seller_Key) REFERENCES Entity_Table(Entity_ID),
   FOREIGN KEY (Buyer_Key) REFERENCES Entity_Table(Entity_ID)
@@ -86,7 +86,7 @@ VALUES
 (39 , '4055 Nichols Park Dr' , '40503' , 'Lexington' , 'KY' , 'Lowe''s' ),
 (40 , '4081 Finn Way' , '40503' , 'Lexington' , 'KY' , 'J. Alexander''s Restaurant' );
 
-INSERT INTO Receipt_Table(Transaction_Number ,  Seller_Key ,  Buyer_Key ,  Picture ,  Zip ,  StateName ,  Number_Of_Items ,  Total_Sales ,  Highest_Price ,  Lowest_Price)
+INSERT INTO Receipt_Table(Transaction_Number ,  Seller_Key ,  Buyer_Key ,  Picture ,  Zip ,  StateName ,  Total_Sales, Number_Of_Items,  Highest_Price ,  Lowest_Price)
 VALUES
 (1 , 13 , 1 , NULL , '40503' , 'KY' , 25 , 5 , 5 , 5),
 (2 , 33 , 31 , NULL , '40504' , 'KY' , 30 , 5 , 6.99 , 3.49),
