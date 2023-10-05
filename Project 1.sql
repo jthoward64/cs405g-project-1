@@ -164,5 +164,3 @@ SELECT * from Entity_Table LEFT  JOIN Telephone_Numbers ON Telephone_Numbers.Ent
 
 
 
-
-
