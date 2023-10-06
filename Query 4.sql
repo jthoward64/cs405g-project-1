@@ -1,7 +1,11 @@
 -- Deliverable 9)
-SELECT EntityName FROM Entity_Table
+SELECT 
+  EntityName AS 'Total Number' 
+FROM Entity_Table
 WHERE EntityName LIKE '%bob%';
 
 -- Deliverable 10)
-SELECT Zip , Total_Sales FROM Receipt_Table
+SELECT Zip, 
+  Total_Sales AS 'Total Sales'
+FROM Receipt_Table
 ORDER BY Total_Sales DESC;
