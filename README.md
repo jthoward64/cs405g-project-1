@@ -536,6 +536,7 @@ WHERE EntityName LIKE '%bo% ';
 | Total Number              |
 +---------------------------+
 | Bob C. Smith              |
+| Bowman F. Wildcat         |
 | Bob C. Smith              |
 | Bob Porter c/o Intech     |
 | Mr. Bob Sydell c/o Intech |
