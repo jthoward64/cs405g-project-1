@@ -523,7 +523,9 @@ INNER JOIN Entity_Table AS Buyer ON ReceiptTable.Buyer_Key = Buyer.Entity_ID;
 ### the query you wrote
 
 ```sql
-SELECT EntityName FROM Entity_Table
+SELECT 
+  EntityName AS "Total Number" 
+FROM Entity_Table
 WHERE EntityName LIKE '%bob%';
 ```
 
@@ -531,7 +533,7 @@ WHERE EntityName LIKE '%bob%';
 
 ```sql
 +---------------------------+
-| EntityName                |
+| Total Number              |
 +---------------------------+
 | Bob C. Smith              |
 | Bob C. Smith              |
@@ -545,7 +547,9 @@ WHERE EntityName LIKE '%bob%';
 ### the query you wrote
 
 ```sql
-SELECT Zip , Total_Sales FROM Receipt_Table
+SELECT Zip, 
+  Total_Sales AS "Total Sales"
+FROM Receipt_Table
 ORDER BY Total_Sales DESC;
 ```
 
@@ -553,7 +557,7 @@ ORDER BY Total_Sales DESC;
 
 ```sql
 +-------+-----------------+
-| Zip   | Total_Sales     |
+| Zip   | Total Sales     |
 +-------+-----------------+
 | 20301 | 705392000000.00 |
 | 20500 |        36217.34 |
