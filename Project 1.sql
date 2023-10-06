@@ -61,7 +61,7 @@ VALUES
 (14 , '2161 Paul Jones Way' , '40509' , 'Lexington' , 'KY' , 'Culver''s' ),
 (15 , '1180 Seven Seas Dr' , '32830' , 'Lake Buena Vista' , 'FL' , 'Magic Kingdom Park' ),
 (16 , '500 W New Circle Rd' , '40511' , 'Lexington' , 'KY' , 'Walmart Supercenter' ),
-(17 , '111 Avenue of Champions Holmes Hall 803' , '40527' , 'Lexington' , 'KY' , 'Tag Howard' ),
+(17 , '123 NotAReal St' , '40502' , 'Lexington' , 'KY' , 'Tag Howard' ),
 (18 , '1600 Pennsylvania Ave NW' , '20500' , 'Washington' , 'DC' , 'White House' ),
 (19 , '1400 Defense Pentagon' , '20301' , 'Washington' , 'DC' , 'Pentagon' ),
 (20 , '101 Cochran Rd' , '40502' , 'Lexington' , 'KY' , 'Joella''s Hot Chicken' ),
@@ -111,6 +111,7 @@ ALTER TABLE Entity_Table
 ADD CONSTRAINT fk_Telephone_Number
 FOREIGN KEY (Primary_Telephone_Number) REFERENCES Telephone_Numbers(Telephone_Number);
 
+-- Primary phone numbers
 INSERT INTO Telephone_Numbers(Telephone_Number ,  Entity_ID)
 VALUES
 ('555-555-5555', 3),
@@ -154,6 +155,14 @@ VALUES
 UPDATE Entity_Table, Telephone_Numbers
 SET Entity_Table.Primary_Telephone_Number = Telephone_Numbers.Telephone_Number
 WHERE Entity_Table.Entity_ID = Telephone_Numbers.Entity_ID;
+
+-- Other phone numbers
+INSERT INTO Telephone_Numbers(Telephone_Number ,  Entity_ID)
+VALUES
+('1-800-591-3869', 29),
+('(859)260-9410', 33),
+('(859)260-9404', 33);
+
 
 -- Example:
 SELECT * from Entity_Table LEFT  JOIN Telephone_Numbers ON Telephone_Numbers.Entity_ID = Entity_Table.Entity_ID;
