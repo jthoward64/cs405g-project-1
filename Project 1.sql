@@ -165,7 +165,10 @@ VALUES
 
 
 -- Example:
-SELECT * from Entity_Table LEFT  JOIN Telephone_Numbers ON Telephone_Numbers.Entity_ID = Entity_Table.Entity_ID;
+SELECT * from Entity_Table;
+SELECT * from Receipt_Table;
+SELECT * from Telephone_Numbers;
+
 
 
 
