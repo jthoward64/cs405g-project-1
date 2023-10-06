@@ -526,7 +526,7 @@ INNER JOIN Entity_Table AS Buyer ON ReceiptTable.Buyer_Key = Buyer.Entity_ID;
 SELECT 
   EntityName AS "Total Number" 
 FROM Entity_Table
-WHERE EntityName LIKE '%bo%';
+WHERE EntityName LIKE '%bo% ';
 ```
 
 ### the output it produced
