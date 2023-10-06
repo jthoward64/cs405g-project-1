@@ -524,23 +524,22 @@ INNER JOIN Entity_Table AS Buyer ON ReceiptTable.Buyer_Key = Buyer.Entity_ID;
 
 ```sql
 SELECT
-  EntityName AS "Total Number"
-FROM Entity_Table
-WHERE EntityName LIKE '%bo% ';
+  COUNT(EntityName) as 'Total Count'
+FROM
+  Entity_Table
+WHERE
+  -- Based on https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/ there is no reliable way to determine if a name is a first name or last name.
+  EntityName LIKE '%Bo%';
 ```
 
 ### the output it produced
 
 ```sql
-+---------------------------+
-| Total Number              |
-+---------------------------+
-| Bob C. Smith              |
-| Bowman F. Wildcat         |
-| Bob C. Smith              |
-| Bob Porter c/o Intech     |
-| Mr. Bob Sydell c/o Intech |
-+---------------------------+
++-------------+
+| Total Count |
++-------------+
+|           7 |
++-------------+
 ```
 
 ## Deliverable 10
