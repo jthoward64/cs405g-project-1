@@ -178,16 +178,14 @@ SELECT * from Receipt_Table;
 ### the query you wrote
 
 ```sql
-Select EntityName, Concat(Street_Name, ", ", City, ", ", StateName, ", ", Zip) As "Full Address" FROM Entity_Table;
+Select EntityName as "Customer/Business Full Name", Concat(Street_Name, ", ", City, ", ", StateName, ", ", Zip) As "Delivery Address" FROM Entity_Table;
 ```
 
 ### the output it produced
 
-## Deliverable 7
-
 ```sql
 +-----------------------------------+----------------------------------------------------------------------+
-| EntityName                        | Full Address                                                         |
+| Customer/Business Full Name       | Delivery Address                                                     |
 +-----------------------------------+----------------------------------------------------------------------+
 | Mr. Ray L. Hyatt Jr.              | 300 Rose Street Room 102 Hardymon Building, Lexington, KY, 40506     |
 | Mr. Ray L. Hyatt Jr.              | 301 Hilltop Avenue, Room 102, Lexington, KY, 40506                   |
@@ -231,6 +229,8 @@ Select EntityName, Concat(Street_Name, ", ", City, ", ", StateName, ", ", Zip) A
 | J. Alexander's Restaurant         | 4081 Finn Way, Lexington, KY, 40503                                  |
 +-----------------------------------+----------------------------------------------------------------------+
 ```
+
+## Deliverable 7
 
 ### Show the command you used to modify the table(s)
 
@@ -523,8 +523,8 @@ INNER JOIN Entity_Table AS Buyer ON ReceiptTable.Buyer_Key = Buyer.Entity_ID;
 ### the query you wrote
 
 ```sql
-SELECT 
-  EntityName AS "Total Number" 
+SELECT
+  EntityName AS "Total Number"
 FROM Entity_Table
 WHERE EntityName LIKE '%bob%';
 ```
@@ -547,7 +547,7 @@ WHERE EntityName LIKE '%bob%';
 ### the query you wrote
 
 ```sql
-SELECT Zip, 
+SELECT Zip,
   Total_Sales AS "Total Sales"
 FROM Receipt_Table
 ORDER BY Total_Sales DESC;
