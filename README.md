@@ -1,5 +1,7 @@
 # Group 3 Submission Document
 
+[GitHub repo we used](https://github.com/jthoward64/cs405g-project-1)
+
 ## Deliverable 1
 
 ### Place all your your group members names and email contacts in your assignment.
