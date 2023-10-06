@@ -526,7 +526,7 @@ INNER JOIN Entity_Table AS Buyer ON ReceiptTable.Buyer_Key = Buyer.Entity_ID;
 SELECT
   EntityName AS "Total Number"
 FROM Entity_Table
-WHERE EntityName LIKE '%bob%';
+WHERE EntityName LIKE '%bo% ';
 ```
 
 ### the output it produced
@@ -536,6 +536,7 @@ WHERE EntityName LIKE '%bob%';
 | Total Number              |
 +---------------------------+
 | Bob C. Smith              |
+| Bowman F. Wildcat         |
 | Bob C. Smith              |
 | Bob Porter c/o Intech     |
 | Mr. Bob Sydell c/o Intech |

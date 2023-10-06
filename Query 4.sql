@@ -2,7 +2,7 @@
 SELECT 
   EntityName AS "Total Number" 
 FROM Entity_Table
-WHERE EntityName LIKE '%bob%';
+WHERE EntityName LIKE '%bo% ';
 
 -- Deliverable 10)
 SELECT Zip, 
